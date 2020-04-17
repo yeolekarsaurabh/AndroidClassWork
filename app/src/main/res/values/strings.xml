@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Layouts</string>
+    <string name="title_layouts">Layouts</string>
+    <string name="title_login">Login</string>
+    <string name="title_fun">Fun</string>
+    <string name="title_confirmation">Books List</string>
+</resources>
