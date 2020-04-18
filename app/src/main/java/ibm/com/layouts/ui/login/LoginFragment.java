@@ -22,6 +22,7 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 import androidx.navigation.NavDirections;
 import androidx.navigation.Navigation;
+
 import ibm.com.layouts.R;
 
 public class LoginFragment extends Fragment {
@@ -29,7 +30,7 @@ public class LoginFragment extends Fragment {
     private LoginViewModel loginViewModel;
     TextInputLayout lastNameLayout;
     RadioGroup radioGenderGroup;
-    TextInputEditText firstName,lastName,email,password;
+    TextInputEditText firstName, lastName, email, password;
     RadioButton maleRadioButton, femaleRadioButton, radioGenderButton;
 
 
@@ -71,18 +72,17 @@ public class LoginFragment extends Fragment {
 
 
         hideButton.setOnClickListener(new View.OnClickListener() {
-             @Override
-             public void onClick(View view) {
-                 hideLastNameLayout();
-             }
-         });
+            @Override
+            public void onClick(View view) {
+                hideLastNameLayout();
+            }
+        });
 
         //Toast Button Action
         toastButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (radioGenderGroup.getCheckedRadioButtonId() != -1)
-                {
+                if (radioGenderGroup.getCheckedRadioButtonId() != -1) {
                     getValuesFromRadioButton();
                 }
             }
@@ -92,7 +92,7 @@ public class LoginFragment extends Fragment {
         submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                  goToConfirmationScreen(view);
+                goToConfirmationScreen(view);
             }
         });
 
@@ -116,19 +116,10 @@ public class LoginFragment extends Fragment {
         Toast.makeText(getActivity(), "You selected " + radioGenderButton.getText(), Toast.LENGTH_SHORT).show();
     }
 
-    private void goToConfirmationScreen(View view){
-        if(loginViewModel.isFirstNameValid(firstName.getText().toString()) && loginViewModel.isLastNameValid(lastName.getText().toString()) &&
-                loginViewModel.isValidEmailAddress(email.getText().toString()) && radioGenderGroup.getCheckedRadioButtonId() != -1)
-        {
+    private void goToConfirmationScreen(View view) {
             NavDirections action =
                     LoginFragmentDirections
                             .actionNavigationLoginToNavigationConfirmationScreen(firstName.getText().toString());
             Navigation.findNavController(view).navigate(action);
-
         }
-        else{
-            Toast.makeText(getActivity(), "There are validation errors, Please correct and Try again", Toast.LENGTH_SHORT).show();
-
-        }
-    }
 }

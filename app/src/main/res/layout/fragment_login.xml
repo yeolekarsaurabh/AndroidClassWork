@@ -22,7 +22,7 @@
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:background="@drawable/login"/>
+            android:background="@mipmap/ic_launcher"/>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/first_name_text_input_layout"
@@ -39,7 +39,7 @@
                 android:id="@+id/first_name_text_input_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Middle Name"
+                android:hint="First Name"
                 android:inputType="text"
                 android:maxLines="1"
                 android:textColor="@android:color/black" />
