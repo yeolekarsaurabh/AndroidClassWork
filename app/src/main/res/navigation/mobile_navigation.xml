@@ -25,7 +25,11 @@
     android:id="@+id/navigation_fun_activity"
     android:name="ibm.com.layouts.ui.funActivity.FunActivityFragment"
     android:label="@string/title_fun"
-    tools:layout="@layout/fragment_fun" />
+    tools:layout="@layout/fragment_fun" >
+        <action
+            android:id="@+id/action_navigation_fun_activity_to_foodItemListFragment2"
+            app:destination="@id/foodItemListFragment" />
+    </fragment>
 
     <fragment
     android:id="@+id/navigation_confirmation_screen"
@@ -34,6 +38,15 @@
     tools:layout="@layout/confirmation_screen" >
         <argument
             android:name="firstName"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/foodItemListFragment"
+        android:name="ibm.com.layouts.ui.funActivity.FoodItemListFragment"
+        android:label="@string/sign_up_confirmation"
+        tools:layout="@layout/fragment_food_item_list" >
+        <argument
+            android:name="name"
             app:argType="string" />
     </fragment>
 </navigation>

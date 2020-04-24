@@ -2,6 +2,20 @@
     <string name="app_name">Layouts</string>
     <string name="title_layouts">Layouts</string>
     <string name="title_login">Login</string>
-    <string name="title_fun">Fun</string>
+    <string name="title_fun">Sign Up</string>
     <string name="title_confirmation">Books List</string>
+    <string name="sign_up_confirmation">Food Item List</string>
+
+    <string-array name="fruits">
+        <item>Apple</item>
+        <item>Banana</item>
+        <item>Cranberry</item>
+        <item>Grapes</item>
+        <item>Kiwi</item>
+        <item>Mango</item>
+        <item>Orange</item>
+        <item>Pears</item>
+        <item>Pineapple</item>
+        <item>Watermelon</item>
+    </string-array>
 </resources>
